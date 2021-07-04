@@ -7,40 +7,58 @@
     <title>Vasily Markov</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="./index.css"/>
 </head>
-<body  style="height: 100%;">
+<body>
+    <!--Header-->
 
-    <div class="container">
-
-        <!--Header-->
         
-        
-        <!-- Tabs for different types of projects -->
-        <div class="row">
-            <div class="card-panel col s12">
-                <h5 class="center">My Projects</h5>
-                <ul class="tabs">
-                    <li class="tab col s3"><a href="#vanilla">Vanilla Javascript</a></li>
-                    <li class="tab col s3"><a href="#node">Node / Express</a></li>
-                    <li class="tab col s3 "><a href="#react">React</a></li>
-                    <li class="tab col s3"><a href="#vue">Vue.js</a></li>
-                  </ul>
-            </div>
+    <!-- Tabs for different types of projects -->
+    <div class="row">
+        <div class="card-panel col s12 red darken-4">
+            <h5 class="center white-text">Vasily Markov | Front End Web Developement</h5>
+            <ul class="tabs">
+                <li class="tab col s3"><a href="#vanilla">Vanilla JS</a></li>
+                <li class="tab col s3"><a href="#node">Node</a></li>
+                <li class="tab col s3 "><a href="#react">React</a></li>
+                <li class="tab col s3"><a href="#vue">Vue.js</a></li>
+                </ul>
+        </div>
+        <div class="container">
             <div id="vanilla" class="col s12"></div>
             <div id="node" class="col s12" ></div>
             <div id="react" class="col s12" ></div>
             <div id="vue" class="col s12"></div>
         </div>
-        
-        <!--  -->
-        
-        
-        <!-- Footer -->
-        
-        
-        
     </div>
+    
+    <!-- Summary / Github / Twitter-->
+    <div class="container">
+        <div class="row">
+            <div class="col s4 center">
+                <a class="btn-floating tooltipped btn-large red darken-4"
+                    data-position="top"
+                    data-tooltip="Review my CV">
+                    <i class="material-icons small">description</i>
+                </a>
+            </div>
+            <div class="col s4 center">
+                <a class="btn-floating tooltipped btn-large red darken-4"
+                data-position="top"
+                data-tooltip="Visit my Github">
+                    <i class="material-icons small">people</i>
+                </a>            </div>
+            <div class="col s4 center">
+                <a class="btn-floating tooltipped btn-large red darken-4"
+                data-position="top"
+                data-tooltip="Contact me on LinkedIn">
+                    <i class="material-icons small">pets</i>
+                </a>            </div>
+        </div>
+    </div>
+   
+    <!-- Footer -->
         
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./projects.js"></script>
@@ -49,6 +67,12 @@
         const instance = M.Tabs.init(el, {
             swipeable: true,
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const elems = document.querySelectorAll('.tooltipped');
+            const instances = M.Tooltip.init(elems);
+        });
+
 
     </script>
     <script src="./index.js"></script>

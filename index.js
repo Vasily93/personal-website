@@ -11,7 +11,7 @@ const render = (tab) => {
         allProjects.forEach((project) => {
             if(project.tags.includes(tab.id)) {
                 const divCard = document.createElement('div');
-                divCard.setAttribute('class', 'col s12');
+                divCard.setAttribute('class', 'col s12 m6');
                 divCard.innerHTML = `
                     <div class="card horizontal">
                         <div class="card-image">
