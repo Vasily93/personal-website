@@ -15,6 +15,7 @@ const allProjects = [
         deploy: '',
         tags: [
             'node',
+            'vanilla'
         ]
     },
     {
@@ -24,6 +25,15 @@ const allProjects = [
         deploy: '',
         tags: [
             'react'
+        ]
+    },
+    {
+        name: 'Movie Search',
+        description: 'Movies search app built with Vue js',
+        repo: '',
+        deploy: '',
+        tags: [
+            'vue'
         ]
     },
     {
