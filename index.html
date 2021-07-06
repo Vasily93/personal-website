@@ -22,7 +22,8 @@
                 <li class="tab col s3"><a href="#vanilla">Vanilla JS</a></li>
                 <li class="tab col s3"><a href="#node">Node</a></li>
                 <li class="tab col s3 "><a href="#react">React</a></li>
-                <li class="tab col s3"><a href="#vue">Vue.js</a></li>
+                <li class="tab col s3"><a href="#vue">Vue</a></li>
+                <!-- <li class="tab col s3"><a href="#angular">Angular</a></li> -->
                 </ul>
         </div>
         <div class="container">
@@ -30,6 +31,7 @@
             <div id="node" class="col s12" ></div>
             <div id="react" class="col s12" ></div>
             <div id="vue" class="col s12"></div>
+            <!-- <div id="angular" class="col s12"></div> -->
         </div>
     </div>
     
@@ -37,7 +39,9 @@
     <div class="container">
         <div class="row">
             <div class="col s4 center">
-                <a class="btn-floating tooltipped btn-large red darken-4"
+                <a class="btn-floating tooltipped btn-large
+                    modal-trigger red darken-4"
+                    href="#modalCV"
                     data-position="top"
                     data-tooltip="Review my CV">
                     <i class="material-icons small">description</i>
@@ -45,17 +49,33 @@
             </div>
             <div class="col s4 center">
                 <a class="btn-floating tooltipped btn-large red darken-4"
+                href="https://github.com/Vasily93"
+                target="_blank"
                 data-position="top"
                 data-tooltip="Visit my Github">
-                    <i class="material-icons small">people</i>
-                </a>            </div>
+                    <i class="material-icons small">pets</i>
+                </a>
+            </div>
             <div class="col s4 center">
                 <a class="btn-floating tooltipped btn-large red darken-4"
+                href="https://www.linkedin.com/in/vasily-markov/"
+                target="_blank"
                 data-position="top"
                 data-tooltip="Contact me on LinkedIn">
-                    <i class="material-icons small">pets</i>
-                </a>            </div>
+                    <i class="material-icons small">people</i>
+                </a>
+            </div>
         </div>
+
+        <div id="modalCV" class="modal">
+            <div class="modal-content">
+              <h4>Modal Header</h4>
+              <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+          </div>
     </div>
    
     <!-- Footer -->
@@ -71,6 +91,11 @@
         document.addEventListener('DOMContentLoaded', function() {
             const elems = document.querySelectorAll('.tooltipped');
             const instances = M.Tooltip.init(elems);
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems);
         });
 
 
